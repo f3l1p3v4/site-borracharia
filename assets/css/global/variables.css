@@ -1,0 +1,23 @@
+/* Essas são as variáveis para usar no site e ficar mais escalável a edição das coisas */
+:root {
+
+  /* Variáveis de Cores Dark */
+  --cor-branco: #FFFFFF;
+  --cor-preto: #000000;
+  --cor-principal: #ffd817;
+  --cor-fundo: #171818;
+  --cor-destaque-1: #f0d13a;
+  --cor-destaque-2: #7a6707;
+
+    /* Variáveis de Cores white 
+  --cor-branco: #FFFFFF;
+  --cor-preto: #000000;
+  --cor-principal: #dafe6e;
+  --cor-fundo: #132420;
+  --cor-destaque-1: #74b838;
+  --cor-destaque-2: #2a9438;*/
+
+  /* Variáveis de Fontes */
+  --regular: 'mark-pro-regular';
+  --bold: 'mark-pro-bold';
+}

@@ -1,0 +1,45 @@
+section.faixas {
+    margin-top: -10px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  section.faixas .faixa-rolante {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+  }
+  section.faixas .faixa-rolante .itens {
+    display: flex;
+    align-items: center;
+    animation: faixa 10s linear infinite;
+  }
+
+  @keyframes faixa {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  section.faixas .faixa-rolante .itens img {
+    margin-left: -10px;
+    width: 80%;
+  }
+  /* Responsivo */
+  @media screen and (max-width: 1000px) {
+    section.faixas {
+      margin-top: -5px;
+    }
+    section.faixas .faixa-rolante .itens {
+      display: flex;
+      align-items: center;
+      animation: faixa 5s linear infinite;
+    }
+    section.faixas .faixa-rolante .itens img {
+      width: 250%;
+    }
+  }
