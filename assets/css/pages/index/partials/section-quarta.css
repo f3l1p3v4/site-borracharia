@@ -3,13 +3,13 @@ section.quarta {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(50deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%);
-  background: -webkit-linear-gradient(50deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%);
+  background: linear-gradient(5deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%);
+  background: -webkit-linear-gradient(5deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%);
   padding: 80px;
   position: relative;
   overflow: hidden;
 }
-section.quarta .imagem {
+/* section.quarta .imagem {
   width: 100%;
   max-width: 400px;
   min-height: 400px;
@@ -20,7 +20,7 @@ section.quarta .imagem {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 2;
-}
+} */
 section.quarta .circulo {
   width: 1000px;
   height: 1000px;
@@ -37,20 +37,24 @@ section.quarta .partes {
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  /* width: 100%;
+  max-width: 100%;
+  margin-left: auto; */
   width: 100%;
-  max-width: 50%;
-  margin-left: auto;
+  max-width: 1000px;
+  margin: auto;
 }
 section.quarta .partes .parte {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
-  max-width: 600px;
+  /* max-width: 600px; */
   position: relative;
 }
 section.quarta .partes .parte.meio {
-  margin: 80px 250px 80px 0;
+  margin: 80px 0 80px 0;
+  justify-content: flex-end;
 }
 section.quarta .partes .parte .icone {
   width: 100%;
@@ -64,6 +68,10 @@ section.quarta .partes .parte .icone {
   -webkit-backdrop-filter: blur(20px);
   border-right: 10px solid var(--cor-principal);
   margin: 0 20px;
+}
+section.quarta .partes .parte .texto {
+  width: 100%;
+  max-width: 500px;
 }
 section.quarta .partes .texto h2 {
   font-family: var(--bold);
@@ -87,16 +95,18 @@ section.quarta .partes .texto p {
   section.quarta {
     flex-direction: column-reverse;
     padding: 80px 20px;
+    background: linear-gradient(0deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 0%, var(--cor-fundo) 0%);
+    background: -webkit-linear-gradient(0deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 0%, var(--cor-fundo) 0%);
   }
   section.quarta .imagem {
     min-height: 250px;
   }
-  section.quarta .circulo {
+  /* section.quarta .circulo {
     width: 700px;
     height: 700px;
     bottom: -500px;
     left: -300px;
-  }
+  } */
   section.quarta .partes {
     align-items: flex-start;
     max-width: 100%;
@@ -109,12 +119,33 @@ section.quarta .partes .texto p {
     padding: 0;
     margin: 50px 0 50px 0;
   }
+  section.quarta .partes .parte .texto {
+    width: 100%;
+    max-width: 500px;
+  }
+  section.quarta .partes .texto h2 {
+    font-family: var(--bold);
+    font-size: 1.2rem;
+    color: var(--cor-branco);
+    line-height: 1.5;
+  }
+  section.quarta .partes .texto p {
+    font-size: 0.9rem;
+  }
   section.quarta .partes .parte .icone {
     width: 100%;
     max-width: 120px;
     min-width: 120px;
     height: 120px;
     border-radius: 50px 20px 20px 20px;
-    margin: 0 20px;
+    margin: 0 20px 0 0;
+  }
+  section.quarta .partes .parte .icone.meio {
+    width: 100%;
+    max-width: 120px;
+    min-width: 120px;
+    height: 120px;
+    border-radius: 50px 20px 20px 20px;
+    margin: 0 0 0 20px;
   }
 }

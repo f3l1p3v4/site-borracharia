@@ -114,15 +114,18 @@ section.terceira .texto p {
     height: 400px;
   }
   section.terceira .circulo .linha.dois {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
+    border: 20px solid var(--cor-principal);
+    border-top: 20px solid transparent;
   }
   section.terceira .circulo .linha.tres {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
+    border: 10px solid var(--cor-destaque-2);
   }
   section.terceira .circulo .linha.quatro {
-    width: 150px;
-    height: 150px;
+    width: 230px;
+    height: 230px;
   }
 }

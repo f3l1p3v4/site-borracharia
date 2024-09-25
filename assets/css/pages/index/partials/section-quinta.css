@@ -5,7 +5,7 @@ section.quinta {
   justify-content: space-between;
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   background: -webkit-linear-gradient(150deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  padding: 150px 100px 150px 100px;
+  padding: 150px 100px 50px 100px;
   width: 100%;
   position: relative;
 }
@@ -17,32 +17,32 @@ section.quinta .faixa {
   padding: 20px;
   background-color: var(--cor-destaque-1);
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
 }
 section.quinta .faixa p {
   font-family: var(--bold);
   font-size: 1rem;
-  color: var(--cor-branco);
+  color: var(--cor-fundo);
   line-height: 1.5;
   text-align: center;
 }
 section.quinta .faixa .losango {
-  border-top: 20px solid var(--cor-destaque-1);
+  border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  transform: rotate(180deg) translate(50%, 0);
+  border-left: 20px solid var(--cor-destaque-1); /* Cor da seta para baixo */
+  transform: rotate(90deg) translate(0, 0); /* Rotaciona para baixo */
   position: absolute;
-  top: -35px;
-  left: 50%;
+  bottom: -35px;
+  left: 45%;
 }
 section.quinta .quadro {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 150px 50px 50px 50px;
+  padding: 50px 50px 50px 50px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.05);
   border-top: 20px solid var(--cor-principal);
@@ -140,13 +140,19 @@ section.quinta .quadro a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px 180px 20px;
+    padding: 120px 20px 50px 20px;
   }
   section.quinta .quadro {
-    padding: 140px 30px 50px 30px;
+    padding: 30px 30px 30px 30px;
+  }
+  section.quinta .quadro h2 {
+    font-size: 1.4rem;
+  }
+  section.quinta .quadro p {
+    font-size: 0.9rem;
   }
   section.quinta .quadro.meio {
-    margin: 80px 0;
+    margin: 40px 0;
   }
   section.quinta .quadro .foto {
     width: 150px;
