@@ -33,6 +33,15 @@ section.sexta .input {
   position: relative;
   width: 100%;
   max-width: 750px;
+
+  font-family: var(--regular);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-branco);
+  background-color: var(--cor-fundo);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  padding: 40px 40px 40px 315px;
+  width: 100%;
 }
 section.sexta .input .bolinha {
   position: absolute;
@@ -57,7 +66,7 @@ section.sexta .input button {
   background-color: transparent;
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: 8px;
   transform: translate(0, -50%);
 }
 section.sexta .input button img {
@@ -65,10 +74,10 @@ section.sexta .input button img {
   max-width: 70px;
   pointer-events: none;
   transition: all 0.3s;
+  animation: imgButton 1.5s linear infinite;
 }
 section.sexta .input button:hover img {
   opacity: 0.7;
-  animation: imgButton 1s linear infinite;
 }
 @keyframes imgButton {
   0% {
@@ -106,15 +115,25 @@ section.sexta .input input:focus {
   section.sexta .input .bolinha {
     display: none;
   }
+  section.sexta h2 {
+    font-size: 1.4rem;
+  }
   section.sexta .input h3 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     left: 25px;
+  }
+  section.sexta p {
+    font-family: var(--regular);
+    font-size: 0.9rem;
+    color: var(--cor-branco);
+    opacity: 0.5;
+    line-height: 1.4;
   }
   section.sexta .input button {
     right: 10px;
   }
   section.sexta .input button img {
-    max-width: 45px;
+    max-width: 55px;
   }
   section.sexta .input input {
     font-size: 0.8rem;

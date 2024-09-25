@@ -3,8 +3,8 @@ section.quarta {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(5deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%);
-  background: -webkit-linear-gradient(5deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%);
+  /* background: linear-gradient(5deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%);
+  background: -webkit-linear-gradient(5deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%); */
   padding: 80px;
   position: relative;
   overflow: hidden;

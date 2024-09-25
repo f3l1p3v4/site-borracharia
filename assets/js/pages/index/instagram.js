@@ -1,37 +1,18 @@
-(function (){
-  /* ---- Constants ---- */
-
-  const URL = 'https://instagram.com/'
-
-  /* ---- Elements ---- */
-
-  const sectionInstagram = document.querySelector('section[name="instagram"]')
-  const inputInstagram = sectionInstagram.querySelector('input[name="instagram"]')
-  const buttonAcessar = sectionInstagram.querySelector('button[name="acessar"]')
-
-  /* ---- Events ---- */
-
-  buttonAcessar.addEventListener('click', () => {
-    const Instagram = inputInstagram.value
-    const url = URL + Instagram
-    navegar(url)
-  })
-
-  /* ---- Aux Functions ---- */
-
-  function navegar (url) {
-    const a = document.createElement('a')
-    a.href = url
-    a.target = '_self'
-    a.click()
+document.getElementById('sendLocationBtn').addEventListener('click', function() {
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          const whatsappNumber = '18997262121'; // Substitua pelo número do borracheiro com código de país, exemplo: 5511999999999
+          const message = `Olá, preciso de socorro. Minha localização: https://www.google.com/maps?q=${latitude},${longitude}`;
+          
+          // Abrir o WhatsApp com a mensagem e localização
+          const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+          window.open(whatsappUrl, '_blank');
+      }, function(error) {
+          alert('Não foi possível obter sua localização. Verifique se as permissões estão ativadas.');
+      });
+  } else {
+      alert('Geolocalização não é suportada pelo seu navegador.');
   }
-
-  inputInstagram.addEventListener('keyup', function(e){
-    if (e.keyCode == 13) {
-      const Instagram = inputInstagram.value
-      const url = URL + Instagram
-      navegar(url)
-    }
-  })
-  
-}())
+});

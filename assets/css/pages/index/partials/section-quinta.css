@@ -1,13 +1,13 @@
 /* <section class="quinta"> */
 section.quinta {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   background: -webkit-linear-gradient(150deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   padding: 150px 100px 50px 100px;
   width: 100%;
   position: relative;
+  gap: 20px;
 }
 section.quinta .faixa {
   display: flex;
@@ -41,8 +41,8 @@ section.quinta .quadro {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 50px 50px 50px 50px;
+  justify-content: flex-start;
+  padding: 30px 30px 30px 30px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.05);
   border-top: 20px solid var(--cor-principal);
@@ -51,13 +51,13 @@ section.quinta .quadro {
   transition: all 0.3s;
   text-align: center;
 }
-section.quinta .quadro.meio {
+/* section.quinta .quadro.meio {
   margin: 0 20px;
-}
-section.quinta .quadro:hover {
+} */
+/* section.quinta .quadro:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-top: 20px solid var(--cor-branco);
-}
+} */
 section.quinta .quadro .foto {
   width: 200px;
   height: 200px;
@@ -137,6 +137,8 @@ section.quinta .quadro a:hover {
 
 @media screen and (max-width: 1000px) {
   section.quinta {
+    display: grid;
+    grid-template-columns: 1fr;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -152,7 +154,7 @@ section.quinta .quadro a:hover {
     font-size: 0.9rem;
   }
   section.quinta .quadro.meio {
-    margin: 40px 0;
+    margin: 20px 0;
   }
   section.quinta .quadro .foto {
     width: 150px;
