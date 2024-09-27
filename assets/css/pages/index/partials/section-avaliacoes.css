@@ -1,0 +1,190 @@
+section.avaliacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(50deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    background: -webkit-linear-gradient(50deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    padding: 40px 80px;
+  }
+  section.avaliacoes .titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 80px 40px 80px;
+  }
+  section.avaliacoes .titulo .texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  section.avaliacoes .texto h3 {
+    font-family: var(--bold);
+    font-size: 1.8rem;
+    color: var(--cor-principal);
+  }
+  section.avaliacoes .texto h2 {
+    font-family: var(--regular);
+    font-size: 1rem;
+    color: var(--cor-branco);
+    opacity: 0.5;
+    line-height: 1.5;
+    max-width: 500px;
+    padding: 10px 0 0 0;
+  }
+  section.avaliacoes .botoes {
+    display: flex;
+    align-items: center;
+  }
+  section.avaliacoes .botoes a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 10px;
+    background-color: var(--cor-claro);
+    margin: 0 0 0 10px;
+    transition: all 0.3s;
+  }
+  section.avaliacoes .botoes a img {
+    width: 30px;
+  }
+  section.avaliacoes .botoes a p {
+    font-family: var(--regular);
+    font-size: var(--f1);
+    color: var(--cor-escuro-1);
+    margin: 10px 0 0 0;
+  }
+  section.avaliacoes .botoes a:hover {
+    background-color: var(--cor-cinza);
+  }
+  section.avaliacoes .slide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: hidden;
+  }
+  section.avaliacoes .slide .itens {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px 80px 80px 80px;
+    animation: scroll 60s linear infinite;
+    width: calc(370px * 5);
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-370px * 5));
+    }
+  }
+  section.avaliacoes .slide .itens .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 350px;
+    min-width: 350px;
+    max-width: 350px;
+    background-color: #363737;
+    border-radius: 10px;
+    padding: 40px;
+    position: relative;
+    margin: 0 20px 0 0;
+  }
+  section.avaliacoes .slide .itens .item img.foto {
+    width: 100%;
+    max-width: 80px;
+    position: absolute;
+    left: 40px;
+    top: -10px;
+  }
+  section.avaliacoes .slide .itens .item .nome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 30px 100px;
+  }
+  section.avaliacoes .slide .itens .item .nome h3 {
+    font-family: var(--bold);
+    font-size: var(--f3);
+    color: var(--cor-branco);
+  }
+  section.avaliacoes .slide .itens .item .nome h4 {
+    font-family: var(--regular);
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    opacity: 0.7;
+    margin: 5px 0 0 0;
+  }
+  section.avaliacoes .slide .itens .item p {
+    font-family: var(--regular);
+    font-size: var(--f2);
+    color: var(--cor-branco);
+    opacity: 0.7;
+    line-height: 1.5;
+  }
+  section.avaliacoes .slide .itens .item img.estrelas {
+    width: 100%;
+    max-width: 150px;
+    margin: 20px 0 0 0;
+  }
+  /* Responsivo */
+  @media screen and (max-width: 1000px) {
+    section.avaliacoes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding:30px 20px;
+    }
+    section.avaliacoes .titulo {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 50px 15px 30px 15px;
+    }
+    section.avaliacoes .botoes {
+      margin: 20px 0 0 0;
+    }
+    section.avaliacoes .botoes a {
+      padding: 30px 15px;
+      margin: 0 5px 0 0;
+    }
+    section.avaliacoes .botoes a img {
+      width: 25px;
+    }
+    section.avaliacoes .slide {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      overflow: hidden;
+    }
+    section.avaliacoes .slide .itens {
+      padding: 20px 20px 80px 20px;
+      width: calc(330px * 5);
+    }
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-330px * 5));
+      }
+    }
+    section.avaliacoes .slide .itens .item {
+      width: 320px;
+      min-width: 320px;
+      max-width: 320px;
+      padding: 30px;
+      margin: 0 10px 0 0;
+    }
+    section.avaliacoes .slide .itens .item img.foto {
+      left: 30px;
+    }
+  }
+  

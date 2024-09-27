@@ -35,7 +35,7 @@ section.quinta .faixa .losango {
   transform: rotate(90deg) translate(0, 0); /* Rotaciona para baixo */
   position: absolute;
   bottom: -35px;
-  left: 45%;
+  left: 50%;
 }
 section.quinta .quadro {
   display: flex;
@@ -160,6 +160,12 @@ section.quinta .quadro a:hover {
     width: 150px;
     height: 150px;
     top: -50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section.quinta .faixa .losango {
+    left: 45%;
   }
 }
   
