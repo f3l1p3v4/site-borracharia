@@ -98,10 +98,10 @@ section.avaliacoes {
   }
   section.avaliacoes .slide .itens .item img.foto {
     width: 100%;
-    max-width: 80px;
+    max-width: 70px;
     position: absolute;
     left: 40px;
-    top: -10px;
+    top: 20px;
   }
   section.avaliacoes .slide .itens .item .nome {
     display: flex;
@@ -185,6 +185,7 @@ section.avaliacoes {
     }
     section.avaliacoes .slide .itens .item img.foto {
       left: 30px;
+      max-width: 60px;
     }
   }
   
