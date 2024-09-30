@@ -1,49 +1,45 @@
 (function (){
 
-  // Variables
+  // Variáveis
 
-  const body = document.querySelector('body')
-  const nav = document.querySelector('nav')
-  const abrirMais = nav.querySelector('button[name="abrirMais"]')
-  const quadroMais = nav.querySelector('div[name="quadroMais"]')
-  const abrirMenuMobile = nav.querySelector('button[name="abrirMenuMobile"]')
-  const menuMobile = nav.querySelector('div[name="menuMobile"]')
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+  const abrirMenuMobile = nav.querySelector('button[name="abrirMenuMobile"]');
+  const menuMobile = nav.querySelector('div[name="menuMobile"]');
+  const linksMenuMobile = menuMobile.querySelectorAll('a'); // Selecionar todos os links do menu mobile
 
   // ADICIONAR CLASSE AO SCROLLAR
-
   function adicionarClasse () {
     window.addEventListener('scroll', () => {
-      const alturaPagina = window.scrollY
-      if (alturaPagina < 10) nav.classList.remove('scroll')
-      else nav.classList.add('scroll')
-    })
+      const alturaPagina = window.scrollY;
+      if (alturaPagina < 10) nav.classList.remove('scroll');
+      else nav.classList.add('scroll');
+    });
   }
-
-  // ABRIR HOSPEDAGEM
-  function cliqueAbrirMais () {
-    abrirMais.addEventListener('click', () => {
-      if (quadroMais.classList.contains('mostrar')) quadroMais.classList.remove('mostrar')
-      else quadroMais.classList.add('mostrar')
-    })
-  }
-
 
   // ABRIR MENU
   function abrirFecharMenuMobile () {
     abrirMenuMobile.addEventListener('click', () => {
-      if (body.classList.contains('bloqueado')) body.classList.remove('bloqueado')
-      else body.classList.add('bloqueado')
-      if (abrirMenuMobile.classList.contains('ativo')) abrirMenuMobile.classList.remove('ativo')
-      else abrirMenuMobile.classList.add('ativo')
-      if (menuMobile.classList.contains('mostrar')) menuMobile.classList.remove('mostrar')
-      else menuMobile.classList.add('mostrar')
-    })
+      body.classList.toggle('bloqueado');
+      abrirMenuMobile.classList.toggle('ativo');
+      menuMobile.classList.toggle('mostrar');
+    });
   }
 
-  // Start
-  adicionarClasse()
-  cliqueAbrirMais()
-  abrirFecharMenuMobile()
+  // FECHAR MENU AO CLICAR EM UM LINK
+  function fecharMenuAoClicar() {
+    linksMenuMobile.forEach(link => {
+      link.addEventListener('click', () => {
+        body.classList.remove('bloqueado');
+        abrirMenuMobile.classList.remove('ativo');
+        menuMobile.classList.remove('mostrar');
+      });
+    });
+  }
 
-}())
+  // Iniciar
+  adicionarClasse();
+  abrirFecharMenuMobile();
+  fecharMenuAoClicar();
 
+}());

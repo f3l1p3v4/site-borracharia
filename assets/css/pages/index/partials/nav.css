@@ -243,7 +243,7 @@ nav .menuMobile {
   top: 0;
   left: 0;
   padding: 30px 20px 50px 20px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #0818159c;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   opacity: 0;
@@ -256,7 +256,7 @@ nav .menuMobile.mostrar {
   opacity: 11;
   visibility: visible;
   pointer-events: all;
-  top: 70px;
+  top: 90px;
 }
 nav .menuMobile a {
   display: flex;
@@ -269,6 +269,9 @@ nav .menuMobile a {
 nav .menuMobile a .icone {
   width: 50px;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.3s;
   background-color: var(--cor-principal);
   background-size: cover;
@@ -277,6 +280,9 @@ nav .menuMobile a .icone {
   pointer-events: none;
   margin: 0 10px 0 0;
 }
+nav .menuMobile a .icone img {
+  width: 35px;
+} 
 nav .menuMobile a h3 {
   font-family: var(--bold);
   font-size: 1rem;
@@ -320,6 +326,9 @@ nav .menuMobile a.destacado:hover {
   nav {
     padding: 20px;
   }
+  nav.scroll {
+    background-color: var(--cor-fundo);
+  }
   nav .opcoes a {
     display: none;
   }
@@ -328,6 +337,9 @@ nav .menuMobile a.destacado:hover {
   }
   nav a.destaque {
     display: none;
+  }
+  .scroll .menuMobile {
+    background-color: var(--cor-fundo);
   }
   nav button.abrirMenuMobile {
     display: flex;
