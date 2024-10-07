@@ -78,31 +78,6 @@ nav .opcoes button:hover {
 nav .opcoes button:hover img {
   transform: scale(0.6);
 }
-/* Button Entrar e Criar */
-nav a.destaque {
-  display: flex;
-  align-items: center;
-  font-family: var(--bold);
-  font-size: 1rem;
-  color: var(--cor-fundo);
-  background-color: var(--cor-principal);
-  border: 2px solid var(--cor-principal);
-  border-radius: 100px;
-  padding: 10px 50px 10px 10px;
-  position: relative;
-  transition: all 0.3s;
-}
-nav a.destaque img {
-  position: absolute;
-  right: 5px;
-  width: 100%;
-  max-width: 30px;
-  border-radius: 50%;
-}
-nav a.destaque:hover {
-  color: var(--cor-fundo);
-  background-color: var(--cor-principal);
-}
 /* Quadro */
 nav .quadro {
   display: flex;
