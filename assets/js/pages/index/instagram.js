@@ -1,4 +1,4 @@
-const locationButtons = document.querySelectorAll('.sendLocationBtn');
+const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 locationButtons.forEach(button => {
   button.addEventListener('click', function() {
@@ -8,10 +8,15 @@ locationButtons.forEach(button => {
         const longitude = position.coords.longitude;
         const whatsappNumber = '18996453979'; // Substitua pelo número correto
         const message = `Olá, preciso de socorro. Minha localização: https://www.google.com/maps?q=${latitude},${longitude}`;
-        
-        // Abrir o WhatsApp com a mensagem e localização
         const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
+
+        // Diferenciar comportamento para iOS e Android
+        if (isIOS) {
+          window.location.href = whatsappUrl; // Redireciona diretamente no iOS
+        } else {
+          window.open(whatsappUrl, '_blank'); // Abre nova aba no Android
+        }
+
       }, function(error) {
         alert('Não foi possível obter sua localização. Verifique se as permissões estão ativadas.');
       });
