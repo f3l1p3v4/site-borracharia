@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navigator.geolocation.getCurrentPosition(function(position) {
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
-          const whatsappNumber = '18996453979'; // Substitua pelo número correto
+          const whatsappNumber = '5518996453979'; // Substitua pelo número correto
           const message = `Olá, preciso de socorro. Minha localização: https://www.google.com/maps?q=${latitude},${longitude}`;
 
           // Diferenciar entre iOS e Android
